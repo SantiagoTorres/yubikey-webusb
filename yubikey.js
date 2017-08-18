@@ -211,7 +211,7 @@ function chunk_buffer(data) {
     }, this.connect())
       .then(() => {return _read_hash_from_key(this.device_, "")})
       .then((hash) => {hash = hash.slice(0, SHA1_HASH_LENGTH);
-        document.getElementById("response-field").innerHTML = "Response:<br/>" +  hash;})
+        document.getElementById("response-field").innerHTML = hash;})
       .then(() => {this.disconnect();});
   }
 
